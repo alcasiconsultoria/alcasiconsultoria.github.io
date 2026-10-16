@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade - Horizonte IA Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: rgba(13, 18, 28, 0.95);
+      --cyan-neon: #00E5FF;
+      --cyan-glow: rgba(0, 229, 255, 0.35);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(7, 9, 14, 0.95);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .brand span { color: var(--cyan-neon); }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--cyan-neon); }
+
+    .container {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    .doc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      color: var(--cyan-neon);
+    }
+
+    .updated-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin: 32px 0 12px;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+
+    p { margin-bottom: 16px; color: #cbd5e1; font-size: 0.98rem; }
+
+    ul { margin: 12px 0 20px 24px; color: #cbd5e1; }
+    li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.25);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      color: #e2e8f0;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand">HORIZONTE <span>IA</span></a>
+    <nav>
+      <a href="index.html">← Voltar ao Início</a>
+      <a href="terms.html">Termos de Serviço</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="doc-card">
+      <h1>Política de Privacidade (Privacy Policy)</h1>
+      <span class="updated-date">Última atualização: 16 de Outubro de 2026</span>
+
+      <p>A privacidade e a segurança das suas informações são prioridades fundamentais para o <strong>Horizonte IA Studio</strong>. Esta Política de Privacidade descreve como os dados são coletados, processados e mantidos em nossa estação de trabalho local.</p>
+
+      <div class="highlight-box">
+        <strong>🔒 Armazenamento 100% Local:</strong> O Horizonte IA Studio opera como uma aplicação local (desktop/servidor local). Suas chaves de API, credenciais e vídeos são mantidos exclusivamente no seu próprio dispositivo e nunca são enviados a servidores externos de terceiros que não sejam as APIs oficiais expressamente autorizadas por você.
+      </div>
+
+      <h2>1. Dados Coletados e Finalidade</h2>
+      <p>O Aplicativo apenas processa os seguintes dados para viabilizar as funcionalidades operacionais:</p>
+      <ul>
+        <li><strong>Tokens de Acesso OAuth 2.0 (TikTok e YouTube):</strong> Utilizados exclusivamente para autenticar requisições oficiais de envio e agendamento de vídeos nas suas contas autorizadas.</li>
+        <li><strong>Chaves de API de Motores de IA (Google Gemini e OpenAI):</strong> Utilizadas para geração de roteiros, metadados de SEO e legendas para os documentários.</li>
+        <li><strong>Metadados de Vídeo:</strong> Títulos, descrições, tags, miniaturas e legendas geradas para as edições do canal.</li>
+      </ul>
+
+      <h2>2. Não Compartilhamento e Não Venda de Dados</h2>
+      <p>Nenhum dado pessoal, token de acesso, credencial ou arquivo de vídeo é comercializado, compartilhado, alugado ou transferido para terceiros, empresas de publicidade ou corretores de dados.</p>
+
+      <h2>3. Conformidade com a Política da TikTok API</h2>
+      <p>O uso das informações recebidas por meio da <strong>TikTok Content Posting API v2</strong> adere estritamente às Diretrizes de Uso de Dados do TikTok:</p>
+      <ul>
+        <li>O aplicativo solicita apenas os escopos indispensáveis para o envio de vídeos (<code>video.upload</code>, <code>video.publish</code> e <code>user.info.basic</code>).</li>
+        <li>Os tokens do TikTok são armazenados de forma criptografada ou restrita ao ambiente local do criador.</li>
+      </ul>
+
+      <h2>4. Conformidade com a Política da Google API</h2>
+      <p>O uso pelo Horizonte IA Studio de informações recebidas das APIs do Google está em conformidade com a <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" style="color: var(--cyan-neon);">Google API Services User Data Policy</a>, incluindo os requisitos de Uso Limitado (Limited Use requirements).</p>
+
+      <h2>5. Retenção e Exclusão de Dados</h2>
+      <p>Você tem controle total e absoluto sobre os seus dados:</p>
+      <ul>
+        <li>As credenciais podem ser apagadas a qualquer momento diretamente no arquivo <code>.env</code> ou pelo painel <strong>Chaves de APIs</strong>.</li>
+        <li>Ao clicar no botão de <strong>Exclusão Permanente</strong> de uma edição no painel de Histórico, todos os arquivos físicos, metadados e comprovantes relacionados àquela edição são deletados permanentemente do disco.</li>
+      </ul>
+
+      <h2>6. Encarregado de Proteção de Dados (Contato)</h2>
+      <p>Caso tenha qualquer dúvida sobre esta política ou queira solicitar esclarecimentos adicionais, entre em contato com nosso responsável de privacidade:</p>
+      <p><strong>Responsável:</strong> Alvaro Campelo da Silva (Alcasi Consultoria)<br>
+      <strong>E-mail:</strong> <a href="mailto:alvarocampelodasilva@gmail.com" style="color: var(--cyan-neon);">alvarocampelodasilva@gmail.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Horizonte IA Studio. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

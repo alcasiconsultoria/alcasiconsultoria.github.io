@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termos de Serviço - Horizonte IA Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-dark: #07090e;
+      --bg-card: rgba(13, 18, 28, 0.95);
+      --cyan-neon: #00E5FF;
+      --cyan-glow: rgba(0, 229, 255, 0.35);
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle);
+      background: rgba(7, 9, 14, 0.95);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1.2rem;
+    }
+
+    .brand span { color: var(--cyan-neon); }
+
+    nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: var(--cyan-neon); }
+
+    .container {
+      max-width: 860px;
+      margin: 40px auto 80px;
+      padding: 0 24px;
+      flex: 1;
+    }
+
+    .doc-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 48px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2.2rem;
+      margin-bottom: 8px;
+      color: var(--cyan-neon);
+    }
+
+    .updated-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      margin: 32px 0 12px;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border-subtle);
+      padding-bottom: 8px;
+    }
+
+    p { margin-bottom: 16px; color: #cbd5e1; font-size: 0.98rem; }
+
+    ul { margin: 12px 0 20px 24px; color: #cbd5e1; }
+    li { margin-bottom: 8px; }
+
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 24px 40px;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="brand">HORIZONTE <span>IA</span></a>
+    <nav>
+      <a href="index.html">← Voltar ao Início</a>
+      <a href="privacy.html">Política de Privacidade</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="doc-card">
+      <h1>Termos de Serviço (Terms of Service)</h1>
+      <span class="updated-date">Última atualização: 16 de Outubro de 2026</span>
+
+      <p>Bem-vindo ao <strong>Horizonte IA Studio</strong> ("Aplicativo", "Serviço"), desenvolvido e mantido por Alvaro Campelo / Alcasi Consultoria para gestão, curadoria e publicação automatizada de documentários audiovisuais e conteúdo digital.</p>
+
+      <h2>1. Aceitação dos Termos</h2>
+      <p>Ao utilizar este aplicativo ou conectar suas contas de redes sociais (incluindo YouTube e TikTok), você concorda expressamente com os presentes Termos de Serviço e com as Políticas e Termos das respectivas plataformas de terceiros integradas.</p>
+
+      <h2>2. Escopo e Finalidade do Serviço</h2>
+      <p>O Horizonte IA Studio foi desenvolvido exclusivamente como uma estação de trabalho para:</p>
+      <ul>
+        <li>Geração, curadoria e revisão de roteiros para vídeos informativos e documentários sobre tecnologia.</li>
+        <li>Processamento e edição automatizada de vídeos nos formatos 16:9 (horizontal) e 9:16 (vertical).</li>
+        <li>Publicação direta ou agendamento de rascunhos (Drafts) nas plataformas autorizadas pelo criador de conteúdo.</li>
+      </ul>
+
+      <h2>3. Integração com Plataformas de Terceiros (TikTok e YouTube)</h2>
+      <p>O Serviço utiliza as seguintes interfaces oficiais de programação de aplicações (APIs):</p>
+      <ul>
+        <li><strong>TikTok Content Posting API v2:</strong> Utilizada unicamente para enviar os vídeos gerados e aprovados para a conta do usuário no TikTok, respeitando rigorosamente as diretrizes da comunidade do TikTok e a política para desenvolvedores do TikTok.</li>
+        <li><strong>YouTube Data API v3:</strong> Utilizada para agendamento e gerenciamento de títulos, descrições e miniaturas no canal @hrztia.</li>
+      </ul>
+      <p>O usuário pode revogar o acesso do Aplicativo a qualquer momento através das configurações de segurança de sua conta no TikTok ou na Conta Google.</p>
+
+      <h2>4. Responsabilidade sobre o Conteúdo</h2>
+      <p>O usuário é o único responsável pelo conteúdo narrativo, audiovisual e legendas publicados em suas contas. O Aplicativo fornece um fluxo de <strong>Curadoria Granular Obrigatória</strong> para que nenhum vídeo seja publicado sem a inspeção humana prévia do criador.</p>
+
+      <h2>5. Propriedade Intelectual</h2>
+      <p>Todos os vídeos, roteiros, marcas e logotipos desenvolvidos no âmbito do canal Horizonte IA pertencem aos seus respectivos titulares. Nenhuma disposição deste termo transfere a posse de propriedade intelectual das plataformas de terceiros para o usuário.</p>
+
+      <h2>6. Contato</h2>
+      <p>Em caso de dúvidas a respeito destes Termos de Serviço, entre em contato através do e-mail oficial de suporte: <strong>alvarocampelodasilva@gmail.com</strong>.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 Horizonte IA Studio. Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>
