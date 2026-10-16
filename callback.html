@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizonte IA - Autenticação TikTok</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #07090e;
+      color: #f8fafc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .auth-card {
+      background: rgba(13, 18, 28, 0.95);
+      border: 1px solid rgba(0, 229, 255, 0.35);
+      box-shadow: 0 0 40px rgba(0, 229, 255, 0.2);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      max-width: 480px;
+      width: 100%;
+    }
+    .spinner {
+      width: 52px;
+      height: 52px;
+      border: 4px solid rgba(0, 229, 255, 0.2);
+      border-top-color: #00E5FF;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 24px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      color: #00E5FF;
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    p {
+      color: #94A3B8;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+    .manual-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #00E5FF, #0077FF);
+      color: #07090e;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .manual-btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-card">
+    <div class="spinner" id="spinner"></div>
+    <h2 id="title">Autorização Confirmada!</h2>
+    <p id="desc">Transferindo credenciais seguras para o seu <strong>Horizonte IA Studio</strong> local...</p>
+    <a href="#" id="linkManual" class="manual-btn" style="display: none;">Concluir no Estúdio</a>
+  </div>
+
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const code = urlParams.get('code');
+      const state = urlParams.get('state');
+      const error = urlParams.get('error');
+      const error_description = urlParams.get('error_description');
+
+      // Se houver erro do TikTok
+      if (error) {
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('title').textContent = 'Erro na Autorização';
+        document.getElementById('title').style.color = '#ff4757';
+        document.getElementById('desc').textContent = error_description || error;
+        return;
+      }
+
+      // Constrói URL de destino local do app
+      const localUrl = `http://localhost:5000/api/tiktok/callback?code=${encodeURIComponent(code || '')}&state=${encodeURIComponent(state || '')}`;
+
+      // Configura botão manual como garantia
+      const linkManual = document.getElementById('linkManual');
+      linkManual.href = localUrl;
+      linkManual.style.display = 'inline-block';
+
+      // Redireciona automaticamente em 400ms
+      setTimeout(() => {
+        window.location.href = localUrl;
+      }, 400);
+    })();
+  </script>
+</body>
+</html>
